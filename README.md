@@ -4,6 +4,14 @@ A Smart Document Classifier powered by transformer-based NLP models like DistilB
 🎯 Use Case
 This project is designed to help organizations (like Tata Motors, banks, legal firms, etc.) automatically organize and label scanned or textual documents, streamlining workflow and reducing manual sorting.
 
+📦 How to Run
+Step 1: Install dependencies
+pip install -r requirements.txt
+Step 2: Run the FastAPI server
+uvicorn app.main:app --reload
+Step 3: Test with curl or Postman
+curl -X POST "http://127.0.0.1:8000/predict" -F "file=@data/sample_docs/invoice.txt"
+
 🚀 Key Features
 ✅ Fine-tuned DistilBERT transformer for text classification
 ✅ FastAPI backend for easy integration
